@@ -93,3 +93,8 @@ async def grafana_tester_charm(ops_test: OpsTest) -> Path:
 @pytest.fixture(scope="module")
 def temp_dir(tmp_path_factory):
     return tmp_path_factory.mktemp("data")
+
+
+@pytest.fixture(scope="module")
+def browser_name() -> str:
+    return "firefox"
